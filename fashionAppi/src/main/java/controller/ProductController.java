@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-//@RequestMapping("/products")
 public class ProductController {
 	
 
@@ -27,6 +26,12 @@ public class ProductController {
 	public String Welcome(Model m) {
 		m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
 		return "welcome";
+	}
+
+	@GetMapping("/productList")
+	public String GetProductList() {
+	//	m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
+		return "productList";
 	}
 
 }
