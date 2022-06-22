@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 
 @Controller
-@RequestMapping("/products")
+//@RequestMapping("/products")
 public class ProductController {
 	
 
@@ -22,13 +22,11 @@ public class ProductController {
 			return "helloWorld";
 	}
 	
-	
-	
-	
+
 	@GetMapping("/")
-	public void getAllProducts() {
-		
-		
+	public String Welcome(Model m) {
+		m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
+		return "welcome";
 	}
 
 }

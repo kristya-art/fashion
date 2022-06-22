@@ -18,4 +18,9 @@
      		<put-attribute name="body" value="/WEB-INF/jsp/helloWorld.jsp" />
         	</definition>
         	
+        	<definition name="welcome" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" />
+        	</definition>
+        	
+        	
         	</tiles-definitions>       
