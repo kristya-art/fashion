@@ -26,4 +26,8 @@
      		<put-attribute name="body" value="/WEB-INF/jsp/productList.jsp" />
         	</definition>
         	
+        	<definition name="formTest" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/formTest.jsp" />
+        	</definition>
+        	
         	</tiles-definitions>       

@@ -1,18 +1,64 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page import="java.util.List"%>
-<%@page import="java.util.Arrays"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>    
+
 
 <html>
 
-<jsp:scriptlet>
-String[] names = new String[]{"Product 1" , "Product 2", "Product 3", "Product 4", "Product 5", "Product 6", "Product 7"};
-pageContext.setAttribute("variables", names);
-</jsp:scriptlet>
+<h2>hello from product list</h2>
 
-<%-- JSP foreach tag --%>
-<c:forEach var="names" items="${pageScope.variables}">
-<c:out value="${names}"/> <br> <br>
-</c:forEach>
+
+<div class="alert">
+<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+some text here
+</div>
+
+
+
+<%--form --%>
+
+<div>
+	<form id="form1" action="productList">
+	<input type="number" name="number" id="number" />
+	<button type="submit" id="btn1" name="noname" value="go" class="btn-link">go</button>
+	</form>
+</div>
+
+
+
+
 
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var close = document.getElementByClassNam("closebtn");
+var i;
+
+for(i=0;i<close.length;i++){
+	close[i].onclick = function() {
+		var div = this.parentElement;
+		
+		div.style.opacity="0";
+		
+		setTimeout(function()){
+			div.style.display = "none";}, 600};
+		}
+	}
+	
+$(document).ready(function(){
+	$('#btn1').click(function(){
+		document.getElementById('form1').submit();
+	});
+});
+
+</script>

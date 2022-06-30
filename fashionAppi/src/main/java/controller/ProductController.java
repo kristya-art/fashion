@@ -22,7 +22,7 @@ public class ProductController {
 	}
 	
 
-	@GetMapping("/")
+	@GetMapping("/welcome")
 	public String Welcome(Model m) {
 		m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
 		return "welcome";
@@ -30,8 +30,13 @@ public class ProductController {
 
 	@GetMapping("/productList")
 	public String GetProductList() {
-	//	m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
+	 //   m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
 		return "productList";
+	}
+	
+	@GetMapping("/formTest")
+	public String getFormTestView() {
+		return "formTest";
 	}
 
 }
