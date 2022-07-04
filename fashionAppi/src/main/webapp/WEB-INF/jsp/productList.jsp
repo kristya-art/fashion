@@ -8,7 +8,7 @@
 
 <div class="alert">
 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-some text here
+info ... 
 </div>
 
 
@@ -21,6 +21,8 @@ some text here
 	<button type="submit" id="btn1" name="noname" value="go" class="btn-link">go</button>
 	</form>
 </div>
+
+
 
 
 

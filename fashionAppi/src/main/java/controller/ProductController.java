@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 /**
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProductController {
 	
 
-	@RequestMapping("/helloWorld")
+	@RequestMapping(value = "/helloWorld", method=RequestMethod.GET)
 		public String hello(Model m) {
 			m.addAttribute("mail", "hello world!");
 			return "helloWorld";
@@ -30,7 +31,7 @@ public class ProductController {
 
 	@GetMapping("/productList")
 	public String GetProductList() {
-	 //   m.addAttribute("message", "YoU aRe WeLcOmE to the FASHION SHOW *****");
+	    
 		return "productList";
 	}
 	
@@ -38,5 +39,5 @@ public class ProductController {
 	public String getFormTestView() {
 		return "formTest";
 	}
-
+	
 }

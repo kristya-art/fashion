@@ -26,8 +26,16 @@
      		<put-attribute name="body" value="/WEB-INF/jsp/productList.jsp" />
         	</definition>
         	
-        	<definition name="formTest" extends="base.definition">
-     		<put-attribute name="body" value="/WEB-INF/jsp/formTest.jsp" />
+        	<definition name="user" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/user.jsp" />
+        	</definition>
+        	
+        	<definition name="users" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/users.jsp" />
+        	</definition>
+        	
+        	<definition name="artikel" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/artikel.jsp" />
         	</definition>
         	
         	</tiles-definitions>       
