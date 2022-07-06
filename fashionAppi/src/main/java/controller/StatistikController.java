@@ -18,6 +18,9 @@ public class StatistikController {
 	
 	@RequestMapping(value="/artikel", method=RequestMethod.GET)
 	public ModelAndView artikel() {
+		 
+		List<String> formats = this.getFormat();
+		
 		Artikel artikel = new Artikel();
 		artikel.setArtId("3");
 		artikel.setArtnr("33");
@@ -33,11 +36,12 @@ public class StatistikController {
 		
 		ModelAndView mav = new ModelAndView("artikel", "command",artikel);
 		mav.addObject("list",list);
+		mav.addObject("formats",formats);
 		return mav;
 	}
  
-	@PostMapping("/AddArtikel")
-	public String getArtikel(@ModelAttribute("artikel") 
+	@RequestMapping(value="/addArtikel", method= RequestMethod.POST)
+	public String addArtikel(@ModelAttribute("artikel") 
 			Artikel artikel, ModelMap model) {
 		
 		model.addAttribute("artId",artikel.getArtId());
@@ -48,7 +52,7 @@ public class StatistikController {
 		
 	}
 	
-	@ModelAttribute("format")
+	@ModelAttribute("formats")
 	public  List<String> getFormat(){
 		List<String> formats = new ArrayList<>();
 		formats.add("XML");

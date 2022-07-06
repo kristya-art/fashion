@@ -4,8 +4,7 @@ public class Artikel {
 	
 	private String artId;
 	 private String artnr;
-	
-    public String getArtId() {
+	     public String getArtId() {
 		return artId;
 	}
 	public void setArtId(String artId) {
@@ -17,10 +16,5 @@ public class Artikel {
 	public void setArtnr(String artnr) {
 		this.artnr = artnr;
 	}
-
- 
- 
- 
- 
- 
+	
 }

@@ -5,7 +5,7 @@
 <h2>welcome to artikel view</h2>
 
 
-<form:form method="POST" action="addArtikel">
+<form:form method="POST" action="addArtikel" onsubmit = "return false">
 <table>
    <tr>
      <td><form:label path="artId">artikel id</form:label></td>
@@ -22,12 +22,12 @@
      </td>
    </tr>
 </table>
-</form:form>
+
 
 <br><br>
 
 
-<form:form action="artikel">
+
    <b>Produktgruppen</b>
   <table>
 
@@ -38,33 +38,48 @@
   
   <tr>
   
-   <tr>
-      <td><input type="checkbox" name="checkbox" id="checkbox" value="artId"></td>
-    </tr>
   
-  <tr>
+   <c:forEach items="${list}" var="artId">
+    	<tr>
+        <td><input type="checkbox"  name="artnr" value="artId" /></td>
+       </tr>
+  </c:forEach>
   
-   <tr>
-      <td><input type="checkbox"  pathe="artnr" name="artId" id="artId" value="artId"></td>
-    </tr>
+<!--    <tr> -->
+<!--       <td><input type="checkbox" name="checkbox" id="checkbox" value="artId"></td> -->
+<!--     </tr> -->
   
-  <tr>
+<!--   <tr> -->
+  
+<!--    <tr> -->
+<!--       <td><input type="checkbox"  name="artId" id="artId" value="artId"></td> -->
+<!--     </tr> -->
+  
+<!--   <tr> -->
     
-    <td><form:checkboxes items="${list}" path="artnr" label="artnr" value="artnr"/></td>
+  <tr>  <td><form:checkboxes items="${list}" path="artnr" label="${artnr}" value="${artId}"/></td></tr>
+<%--     <td><form:checkboxes items="list" path="artnr" label="artnr" value="artId"/></td> --%>
   </tr>
   <br><br>
   
  <tr><td> <b>Dateiformat</b><td><tr>
-<!--   <tr> -->
-<%-- 		  <td><form:label path="format">gender</form:label></td> --%>
-<%-- 		  <td><form:radiobutton path="format" value="XLSX" label="XLSX" /> --%>
-<%-- 		  	  <form:radiobutton path="format" vale="CSV" label="CSV" /> --%>
-<%-- 		  	  <form:radiobutton path="format" vale="XML" label="XML" /> --%>
-<!-- 		  </td> -->
-		  
-<!-- 		</tr> -->
-<!-- <tr> -->
+  <tr>
+<td><input type="radio" name="command" value="0"/>XLSX</td>
+<td><input type="radio" name="command" value="1"/>CSV</td>
 
+<td><input type="radio" name="command" value="2"/>XML</td>
+
+<%--   <td><form:checkboxes items="${formats}" path="formats"/></td> --%>
+  </tr>
+		
+		
+<!-- <tr> -->
+<!-- <tr> -->
+<%-- <td><form:label path="format"></form:label></td> --%>
+<!-- <td> -->
+<%-- <form:radiobuttons path="format" items="${formats}"/> --%>
+<!-- </td> -->
+<!-- </tr> -->
         
 
 <c:choose>
@@ -82,7 +97,7 @@
 </c:choose>
 
      <td colspan="2"> 
-     <input type="submit" value="Submit"/>
+     <input type="submit" value="Exportieren"/>
      </td>
 </tr>   
 </table>
