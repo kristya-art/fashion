@@ -38,4 +38,8 @@
      		<put-attribute name="body" value="/WEB-INF/jsp/artikel.jsp" />
         	</definition>
         	
+        	<definition name="zip" extends="base.definition">
+     		<put-attribute name="body" value="/WEB-INF/jsp/zip.jsp" />
+        	</definition>
+        	
         	</tiles-definitions>       
