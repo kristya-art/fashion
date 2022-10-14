@@ -43,14 +43,15 @@
 </table>
 <h1>testing ... </h1>
  --%>
- 
+   <title>A am  a user page</title>
  <table>
-  <tr>
-   <td><tr>i am users page in testing</tr></td>
-  </tr>
-  <tr>
-	  <td>User name</td>
+
+  <tr><td>User name</td>
 	  <td>${username}</td>
-	</tr>
+ </tr>
+  <tr>	
+  <td>Article Number</td>  
+	  <td>${artnr}</td>
+</tr>
  </table>
 </html>

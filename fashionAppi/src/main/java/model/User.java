@@ -10,7 +10,14 @@ public class User {
 	private String gender;
 	private String country;
 	private String favoriteNumber;
+	private String artnr;
 	
+	public String getArtnr() {
+		return artnr;
+	}
+	public void setArtnr(String artnr) {
+		this.artnr = artnr;
+	}
 	public String getFavoriteNumber() {
 		return favoriteNumber;
 	}
