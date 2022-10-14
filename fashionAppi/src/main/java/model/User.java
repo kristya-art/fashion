@@ -68,8 +68,6 @@ public class User {
 	}
 	
 	public String createPassword() {
-		return favoriteNumber+username;
-	}
-	
-
+		return favoriteNumber+username + favoriteNumber;
+    }
 }
