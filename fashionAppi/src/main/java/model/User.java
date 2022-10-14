@@ -67,6 +67,9 @@ public class User {
 		this.country = country;
 	}
 	
+	public String createPassword() {
+		return favoriteNumber+username;
+	}
 	
 
 }
