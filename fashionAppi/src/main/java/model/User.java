@@ -9,9 +9,11 @@ public class User {
 	private String[] favoriteFrameworks;
 	private String gender;
 	private String country;
-	private String favoriteNumber;
+	private int favoriteNumber;
 	private String artnr;
-	private String symbol;
+    private String symbol;
+	private int additionalNumber;
+
 	
 	
 	public String getSymbol() {
@@ -27,10 +29,11 @@ public class User {
 		this.artnr = artnr;
 	}
 	public String getFavoriteNumber() {
-		return favoriteNumber;
+		return Integer.toString(favoriteNumber);
 	}
 	public void setFavoriteNumber(String favoriteNumber) {
-		this.favoriteNumber = favoriteNumber;
+		
+		this.favoriteNumber = Integer.valueOf(additionalNumber);
 	}
 	public String getUsername() {
 		return username;
@@ -76,6 +79,9 @@ public class User {
 	}
 	
 	public String createPassword() {
-		return favoriteNumber+username + symbol + favoriteNumber;
+
+	
+		return Integer.toString(favoriteNumber%6) + username+symbol+ Integer.toString(additionalNumber);
+
     }
 }
