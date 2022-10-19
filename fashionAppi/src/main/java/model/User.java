@@ -11,7 +11,15 @@ public class User {
 	private String country;
 	private String favoriteNumber;
 	private String artnr;
+	private String symbol;
 	
+	
+	public String getSymbol() {
+		return symbol;
+	}
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+	}
 	public String getArtnr() {
 		return artnr;
 	}
@@ -68,6 +76,6 @@ public class User {
 	}
 	
 	public String createPassword() {
-		return favoriteNumber+username + favoriteNumber;
+		return favoriteNumber+username + symbol + favoriteNumber;
     }
 }
