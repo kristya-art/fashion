@@ -81,7 +81,7 @@ public class User {
 	public String createPassword() {
 
 	
-		return Integer.toString(favoriteNumber%6) + username+symbol+ Integer.toString(additionalNumber);
+		return symbol+symbol+symbol+ username+symbol+ Integer.toString(additionalNumber);
 
     }
 }
