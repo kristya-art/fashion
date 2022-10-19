@@ -11,16 +11,16 @@ public class User {
 	private String country;
 	private int favoriteNumber;
 	private String artnr;
-    private String symbol;
+    private String symbolS;
 	private int additionalNumber;
 
 	
 	
 	public String getSymbol() {
-		return symbol;
+		return symbolS;
 	}
 	public void setSymbol(String symbol) {
-		this.symbol = symbol;
+		this.symbolS = symbol;
 	}
 	public String getArtnr() {
 		return artnr;
@@ -82,7 +82,7 @@ public class User {
 
 	
 
-		return symbol+symbol+symbol+ username+symbol+ Integer.toString(additionalNumber);
+		return username+symbolS+ Integer.toString(additionalNumber);
 
 
     }
