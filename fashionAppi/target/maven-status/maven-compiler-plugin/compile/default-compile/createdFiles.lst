@@ -1,0 +1,8 @@
+model\Artikel.class
+model\CaptchaSettings.class
+model\Product.class
+model\PDFFile.class
+controller\UserController.class
+controller\ProductController.class
+controller\StatistikController.class
+model\User.class
