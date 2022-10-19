@@ -6,6 +6,7 @@ temp/
 
 # Maven Target
 /.target/
+/fashionAppi/target
 
 # Eclipse Classpath
 .classpath
@@ -13,3 +14,7 @@ temp/
 /bin/
 
 /.metadata/
+
+/fashionAppi/src/main/java/services
+/fashionAppi/src/main/java/controller
+/fashionAppi/src/main/java/model
